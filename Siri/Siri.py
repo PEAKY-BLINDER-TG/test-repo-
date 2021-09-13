@@ -1,8 +1,5 @@
 from pyrogram import Client, filters
 
-import youtube_dl
-from youtube_search import YoutubeSearch
-import requests
 
 import os
 import time
