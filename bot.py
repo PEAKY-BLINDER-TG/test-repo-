@@ -18,18 +18,16 @@ async def start(client, message):
    if message.chat.type == 'private':
        await Bot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Hey There, I'm Telegraph Bot
-I can upload photos or videos to telegraph. Made by @ImJanindu 🇱🇰
-Hit help button to find out more about how to use me</b>""",   
+               text="""<b>Hey iam test bot of <a href="https://t.me/peaky_blinder_tg">peaky blinder</a> </b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
                                             "Help", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Channel", url="https://t.me/Infinity_BOTs")
+                                            "Channel", url="https://t.me/cz_films")
                                     ],[
                                       InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/ImJanindu/JETelegraphBot")
+                                            "my dev", url="https://github.com/ImJanindu/JETelegraphBot")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -62,16 +60,14 @@ async def about(client, message):
         await Bot.send_message(
                chat_id=message.chat.id,
                text="""<b>About Telegraph Bot!</b>
-<b>♞ Developer:</b> <a href="https://t.me/ImJanindu">Janindu 🇱🇰</a>
-<b>♞ Support:</b> <a href="https://t.me/InfinityBOTs_Support">Infinity BOTs Support</a>
+<b>♞ Developer:</b> <a href="https://t.me/peaky_blinder_tg">peaky blinder</a>
+<b>♞ Support:</b> <a href="https://t.me/cinemazilla">cinema zilla</a>
 <b>♞ Library:</b> <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a>
-<b>~ @Infinity_BOTs</b>""",
+<b>just for rasam</b>""",
      reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
                                             "Back", callback_data="help"),
-                                        InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/ImJanindu/JETelegraphBot")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
