@@ -12,10 +12,10 @@ Bot = Client(
    bot_token=Config.TG_BOT_TOKEN,
 )
 
-@Client.on_message(filters.command("start"))
+@Bot.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await Client.reply_photo(
+       await Bot.reply_photo(
                photo="https://telegra.ph/file/05cfe0010e426cd556d7c.jpg",
                chat_id=message.chat.id,
                caption="""<b>Hey There, I'm test bot of <a href="https://t.me/Peaky_blinder_tg">Peaky blinder</a></b>""",   
@@ -33,10 +33,10 @@ async def start(client, message):
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Client.on_message(filters.command("help"))
+@Bot.on_message(filters.command("help"))
 async def help(client, message):
     if message.chat.type == 'private':   
-        await Client.send_message(
+        await Bot.send_message(
                chat_id=message.chat.id,
                text="""<b>avnte oru help phaaaa </b>""",
         reply_markup=InlineKeyboardMarkup(
@@ -53,10 +53,10 @@ async def help(client, message):
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Client.on_message(filters.command("about"))
+@Bot.on_message(filters.command("about"))
 async def about(client, message):
     if message.chat.type == 'private':   
-        await Client.send_message(
+        await Bot.send_message(
                chat_id=message.chat.id,
                text="""<b>About Telegraph Bot!</b>
 <b>♞ Developer:</b> <a href="https://t.me/ImJanindu">Janindu 🇱🇰</a>
@@ -95,4 +95,4 @@ Join @Infinity_BOTs
 """
 )
 
-Client.run()
+Bot.run()
