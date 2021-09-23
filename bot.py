@@ -15,12 +15,9 @@ Client = Client(
 @Client.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await Client.send_photo(
-               photo="https://telegra.ph/file/81a2435b00d1d77d511f1.jpg",
+       await Client.send_message(
                chat_id=message.chat.id,
-               caption="""<b>Hey There, I'm Telegraph Bot
-I can upload photos or videos to telegraph. Made by @ImJanindu 🇱🇰
-Hit help button to find out more about how to use me</b>""",   
+               text="""<b>Hey There, I'm test bot of <a href="https://t.me/Peaky_blinder_tg">Peaky blinder</a></b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
@@ -40,9 +37,7 @@ async def help(client, message):
     if message.chat.type == 'private':   
         await Client.send_message(
                chat_id=message.chat.id,
-               text="""<b>Telegraph Bot Help!
-Just send a photo or video less than 5mb file size, I'll upload it to telegraph.
-~ @Infinity_BOTs</b>""",
+               text="""<b>avnte oru help phaaaa </b>""",
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
