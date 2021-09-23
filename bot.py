@@ -33,6 +33,30 @@ async def start(client, message):
             disable_web_page_preview=True,        
             parse_mode="html"
 )
+    else:
+        Send_message = await bot.send_message(
+            chat_id=update.chat.id,
+            text=f"""<b>
+𝙃𝙞, {update.from_user.mention}! 𝙄 𝘾𝙤𝙪𝙡𝙙𝙣'𝙩 𝙁𝙞𝙣𝙙 𝙏𝙝𝙚 𝙈𝙤𝙫𝙞𝙚 𝙔𝙤𝙪'𝙧𝙚 𝙇𝙤𝙤𝙠𝙞𝙣𝙜 𝙁𝙤𝙧 🥲🥲 
+🔹മലയാളത്തിൽ കമെന്റ് ചെയ്‌താൽ മൂവി കിട്ടില്ല.
+🔹കിട്ടാത്തവർ താഴെ കാണുന്ന ബട്ടണിൽ ഉള്ള ഗ്രൂപ്പിൽ വന്നു സിനിമ ചോദിക്കൂ</b>
+""",
+            reply_markup=InlineKeyboardMarkup(
+            [
+                
+                [ 
+                    InlineKeyboardButton("Sᴇᴀʀᴄʜ Iɴ GᴏᴏɢʟE", url=f"https://google.com/search?q={query}")
+                ],
+                [  
+                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ Aᴅᴍɪɴs", url="https://t.me/Moviegramhelpbot")
+                ]
+            ]
+        ),
+         reply_to_message_id=update.message_id
+        )
+
+        await asyncio.sleep(10)
+        await Send_message.delete()
 
 @Bot.on_message(filters.command("help"))
 async def help(client, message):
