@@ -15,7 +15,7 @@ Client = Client(
 @Client.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await Jebot.send_message(
+       await Client.send_message(
                chat_id=message.chat.id,
                text="""<b>Hey There, I'm Telegraph Bot
 I can upload photos or videos to telegraph. Made by @ImJanindu 🇱🇰
@@ -37,7 +37,7 @@ Hit help button to find out more about how to use me</b>""",
 @Client.on_message(filters.command("help"))
 async def help(client, message):
     if message.chat.type == 'private':   
-        await Jebot.send_message(
+        await Client.send_message(
                chat_id=message.chat.id,
                text="""<b>Telegraph Bot Help!
 Just send a photo or video less than 5mb file size, I'll upload it to telegraph.
@@ -59,7 +59,7 @@ Just send a photo or video less than 5mb file size, I'll upload it to telegraph.
 @Client.on_message(filters.command("about"))
 async def about(client, message):
     if message.chat.type == 'private':   
-        await Jebot.send_message(
+        await Client.send_message(
                chat_id=message.chat.id,
                text="""<b>About Telegraph Bot!</b>
 <b>♞ Developer:</b> <a href="https://t.me/ImJanindu">Janindu 🇱🇰</a>
