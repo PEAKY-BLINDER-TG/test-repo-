@@ -15,7 +15,7 @@ Client = Client(
 @Client.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await Client.send_photo(
+       await Client.reply_photo(
                photo="https://telegra.ph/file/05cfe0010e426cd556d7c.jpg",
                chat_id=message.chat.id,
                caption="""<b>Hey There, I'm test bot of <a href="https://t.me/Peaky_blinder_tg">Peaky blinder</a></b>""",   
