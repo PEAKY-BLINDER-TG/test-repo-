@@ -5,7 +5,7 @@ from telegraph import upload_file
 from config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
- Client(
+bot = Client(
    "Telegraph Uploader",
    api_id=Config.APP_ID,
    api_hash=Config.API_HASH,
