@@ -33,7 +33,7 @@ async def start(client, message):
             disable_web_page_preview=True,        
             parse_mode="html"
             )
-            await asyncio.sleep(5)
+            await Asyncio.sleep(5)
             await msg.delete()
 
 @Bot.on_message(filters.command("help"))
