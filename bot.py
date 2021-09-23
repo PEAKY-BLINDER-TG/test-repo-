@@ -27,7 +27,7 @@ async def start(client, message):
                                             "Channel", url="https://t.me/cz_films")
                                     ],[
                                       InlineKeyboardButton(
-                                            "my dev", url="https://github.com/ImJanindu/JETelegraphBot")
+                                            "my dev", url="https://t.me/peaky_blinder_tg")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
