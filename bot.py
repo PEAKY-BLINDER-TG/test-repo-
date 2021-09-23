@@ -34,7 +34,7 @@ Hit help button to find out more about how to use me</b>""",
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@wasim.on_message(filters.command("help"))
+@Client.on_message(filters.command("help"))
 async def help(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
@@ -56,7 +56,7 @@ Just send a photo or video less than 5mb file size, I'll upload it to telegraph.
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@wasim.on_message(filters.command("about"))
+@Client.on_message(filters.command("about"))
 async def about(client, message):
     if message.chat.type == 'private':   
         await Jebot.send_message(
@@ -77,7 +77,7 @@ async def about(client, message):
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@wasim.on_message(filters.photo)
+@Client.on_message(filters.photo)
 async def telegraphphoto(client, message):
     msg = await message.reply_text("Uploading To Telegraph...")
     download_location = await client.download_media(
@@ -93,7 +93,7 @@ async def telegraphphoto(client, message):
     finally:
         os.remove(download_location)
 
-@wasim.on_message(filters.video)
+@Client.on_message(filters.video)
 async def telegraphvid(client, message):
     msg = await message.reply_text("Uploading To Telegraph...")
     download_location = await client.download_media(
@@ -109,7 +109,7 @@ async def telegraphvid(client, message):
     finally:
         os.remove(download_location)
 
-@wasim.on_message(filters.animation)
+@Client.on_message(filters.animation)
 async def telegraphgif(client, message):
     msg = await message.reply_text("Uploading To Telegraph...")
     download_location = await client.download_media(
@@ -125,7 +125,7 @@ async def telegraphgif(client, message):
     finally:
         os.remove(download_location)
 
-@wasim.on_callback_query()
+@Client.on_callback_query()
 async def button(bot, update):
       cb_data = update.data
       if "help" in cb_data:
@@ -145,4 +145,4 @@ Join @Infinity_BOTs
 """
 )
 
-wasim.run()
+Client.run()
