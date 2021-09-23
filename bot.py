@@ -15,9 +15,10 @@ Client = Client(
 @Client.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await Client.send_message(
+       await Client.send_photo(
                chat_id=message.chat.id,
-               text="""<b>Hey There, I'm Telegraph Bot
+               photo="https://telegra.ph/file/81a2435b00d1d77d511f1.jpg",
+               caption="""<b>Hey There, I'm Telegraph Bot
 I can upload photos or videos to telegraph. Made by @ImJanindu 🇱🇰
 Hit help button to find out more about how to use me</b>""",   
                             reply_markup=InlineKeyboardMarkup(
