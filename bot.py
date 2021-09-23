@@ -16,7 +16,7 @@ Bot = Client(
 @Bot.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       Send_message = await Bot.send_message(
+       await Bot.send_message(
                chat_id=message.chat.id,
                text="""<b>Hey There, I'm test bot of <a href="https://t.me/Peaky_blinder_tg">Peaky blinder</a></b>""",   
                             reply_markup=InlineKeyboardMarkup(
@@ -32,9 +32,7 @@ async def start(client, message):
                             ),        
             disable_web_page_preview=True,        
             parse_mode="html"
-            )
-            await asyncio.sleep(10)
-            await Send_message.delete()
+)
 
 @Bot.on_message(filters.command("help"))
 async def help(client, message):
