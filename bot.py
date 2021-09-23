@@ -13,10 +13,10 @@ Bot = Client(
    bot_token=Config.TG_BOT_TOKEN,
 )
 
-@bot.on_message(filters.command("start"))
+@Bot.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await Jebot.send_message(
+       await Bot.send_message(
                chat_id=message.chat.id,
                text="""<b>Hey There, I'm Telegraph Bot
 I can upload photos or videos to telegraph. Made by @ImJanindu 🇱🇰
