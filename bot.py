@@ -16,9 +16,8 @@ Bot = Client(
 @Bot.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       message.reply_photo(
-               photo="https://telegra.ph/file/05cfe0010e426cd556d7c.jpg",
-               caption="""<b>Hey There, I'm test bot of <a href="https://t.me/Peaky_blinder_tg">Peaky blinder</a></b>""",   
+       message.reply_text(
+               text="""<b>Hey There, I'm test bot of <a href="https://t.me/Peaky_blinder_tg">Peaky blinder</a></b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
