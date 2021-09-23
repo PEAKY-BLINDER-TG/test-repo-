@@ -16,7 +16,8 @@ Bot = Client(
 @Bot.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       message.reply_text(
+       await Bot.send_message(
+               chat_id=message.chat.id,
                text="""<b>Hey There, I'm test bot of <a href="https://t.me/Peaky_blinder_tg">Peaky blinder</a></b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
@@ -28,7 +29,8 @@ async def start(client, message):
                                       InlineKeyboardButton(
                                             "Source Code", url="https://github.com/ImJanindu/JETelegraphBot")
                                     ]]
-                            ),                
+                            ), 
+            disable_web_page_preview=True,               
             parse_mode="html"
 )
 
