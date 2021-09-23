@@ -12,10 +12,10 @@ Peaky = Client(
    bot_token=Config.TG_BOT_TOKEN,
 )
 
-@Jebot.on_message(filters.command("start"))
+@Peaky.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await Jebot.send_message(
+       await Peaky.send_message(
                chat_id=message.chat.id,
                text="""<b>Hey There, I'm Telegraph Bot
 I can upload photos or videos to telegraph. Made by @ImJanindu 🇱🇰
@@ -34,10 +34,10 @@ Hit help button to find out more about how to use me</b>""",
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Jebot.on_message(filters.command("help"))
+@Peaky.on_message(filters.command("help"))
 async def help(client, message):
     if message.chat.type == 'private':   
-        await Jebot.send_message(
+        await Peaky.send_message(
                chat_id=message.chat.id,
                text="""<b>Telegraph Bot Help!
 Just send a photo or video less than 5mb file size, I'll upload it to telegraph.
@@ -56,10 +56,10 @@ Just send a photo or video less than 5mb file size, I'll upload it to telegraph.
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Jebot.on_message(filters.command("about"))
+@Peaky.on_message(filters.command("about"))
 async def about(client, message):
     if message.chat.type == 'private':   
-        await Jebot.send_message(
+        await Peaky.send_message(
                chat_id=message.chat.id,
                text="""<b>About Telegraph Bot!</b>
 <b>♞ Developer:</b> <a href="https://t.me/ImJanindu">Janindu 🇱🇰</a>
@@ -77,7 +77,7 @@ async def about(client, message):
             disable_web_page_preview=True,        
             parse_mode="html")
 
-@Jebot.on_message(filters.photo)
+@Peaky.on_message(filters.photo)
 async def telegraphphoto(client, message):
     msg = await message.reply_text("Uploading To Telegraph...")
     download_location = await client.download_media(
@@ -87,13 +87,13 @@ async def telegraphphoto(client, message):
     except:
         await msg.edit_text("Photo size should be less than 5mb!") 
     else:
-        await msg.edit_text(f'**Uploaded To Telegraph!\n\n👉 https://telegra.ph{response[0]}\n\nJoin @JEBotZ**',
+        await msg.edit_text(f'**Uploaded To Telegraph!\n\n👉 https://telegra.ph{response[0]}\n\nJoin @no_ones_like_me**',
             disable_web_page_preview=True,
         )
     finally:
         os.remove(download_location)
 
-@Jebot.on_message(filters.video)
+@Peaky.on_message(filters.video)
 async def telegraphvid(client, message):
     msg = await message.reply_text("Uploading To Telegraph...")
     download_location = await client.download_media(
@@ -109,7 +109,7 @@ async def telegraphvid(client, message):
     finally:
         os.remove(download_location)
 
-@Jebot.on_message(filters.animation)
+@Peaky.on_message(filters.animation)
 async def telegraphgif(client, message):
     msg = await message.reply_text("Uploading To Telegraph...")
     download_location = await client.download_media(
@@ -125,7 +125,7 @@ async def telegraphgif(client, message):
     finally:
         os.remove(download_location)
 
-@Jebot.on_callback_query()
+@Peaky.on_callback_query()
 async def button(bot, update):
       cb_data = update.data
       if "help" in cb_data:
@@ -141,8 +141,8 @@ async def button(bot, update):
 print(
     """
 Bot Started!
-Join @Infinity_BOTs
+Join @cinemazilla
 """
 )
 
-Jebot.run()
+Peaky.run()
