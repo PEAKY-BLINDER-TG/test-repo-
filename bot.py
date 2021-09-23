@@ -18,7 +18,7 @@ async def start(client, message):
        await Peaky.send_message(
                chat_id=message.chat.id,
                text="""<b>Hey There, I'm Telegraph Bot
-I can upload photos or videos to telegraph. Made by <a href="https://t.me/peaky_blinder_tg>[★] ᴘᴇᴀᴋʏ вℓιи∂єя [★]</a>
+I can upload photos or videos to telegraph. Made by <a href="https://t.me/peaky_blinder_tg">[★] ᴘᴇᴀᴋʏ вℓιи∂єя [★]</a>
 Hit help button to find out more about how to use me</b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
@@ -58,9 +58,9 @@ async def about(client, message):
         await Peaky.send_message(
                chat_id=message.chat.id,
                text="""<b>About Telegraph Bot!</b>
-<b>♞ Developer:</b> <a href="https://t.me/peaky_blinder_tg">peaky</a>
-<b>♞ Support:</b> <a href="https://t.me/cinemazilla">cinemazilla</a>
-<b>♞ Library:</b> <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a>
+<b>♞ Developer: <a href="https://t.me/peaky_blinder_tg">peaky</a></b>
+<b>♞ Support: <a href="https://t.me/cinemazilla">cinemazilla</a></b>
+<b>♞ Library: <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a></b>
 <b>~ @no_ones_like_me</b>""",
      reply_markup=InlineKeyboardMarkup(
                                 [[
