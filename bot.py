@@ -1,5 +1,6 @@
 import os
 import logging
+import asyncio
 from pyrogram import Client, filters
 from telegraph import upload_file
 from config import Config
@@ -15,7 +16,7 @@ Bot = Client(
 @Bot.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await Bot.send_message(
+       msg = await Bot.send_message(
                chat_id=message.chat.id,
                text="""<b>Hey There, I'm test bot of <a href="https://t.me/Peaky_blinder_tg">Peaky blinder</a></b>""",   
                             reply_markup=InlineKeyboardMarkup(
@@ -30,7 +31,10 @@ async def start(client, message):
                                     ]]
                             ),        
             disable_web_page_preview=True,        
-            parse_mode="html")
+            parse_mode="html"
+            )
+            await asyncio.sleep(5)
+            await msg.delete()
 
 @Bot.on_message(filters.command("help"))
 async def help(client, message):
