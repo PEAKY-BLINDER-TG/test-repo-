@@ -6,7 +6,7 @@ from config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 Client = Client(
-   "Telegraph Uploader",
+   "Chumma oru bot",
    api_id=Config.APP_ID,
    api_hash=Config.API_HASH,
    bot_token=Config.TG_BOT_TOKEN,
