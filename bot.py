@@ -18,7 +18,6 @@ async def start(client, message):
    if message.chat.type == 'private':
        message.reply_photo(
                photo="https://telegra.ph/file/05cfe0010e426cd556d7c.jpg",
-               chat_id=message.chat.id,
                text="""<b>Hey There, I'm test bot of <a href="https://t.me/Peaky_blinder_tg">Peaky blinder</a></b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
