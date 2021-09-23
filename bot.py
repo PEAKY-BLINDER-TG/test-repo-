@@ -18,17 +18,17 @@ async def start(client, message):
        await Peaky.send_message(
                chat_id=message.chat.id,
                text="""<b>Hey There, I'm Telegraph Bot
-I can upload photos or videos to telegraph. Made by @ImJanindu 🇱🇰
+I can upload photos or videos to telegraph. Made by <a href="https://t.me/peaky_blinder_tg>[★] ᴘᴇᴀᴋʏ вℓιи∂єя [★]</a>
 Hit help button to find out more about how to use me</b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
                                             "Help", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Channel", url="https://t.me/Infinity_BOTs")
+                                            "Channel", url="https://t.me/cz_films")
                                     ],[
                                       InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/ImJanindu/JETelegraphBot")
+                                            "my devv", url="https://t.me/PEAKY_blinder_tg")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -39,18 +39,14 @@ async def help(client, message):
     if message.chat.type == 'private':   
         await Peaky.send_message(
                chat_id=message.chat.id,
-               text="""<b>Telegraph Bot Help!
-Just send a photo or video less than 5mb file size, I'll upload it to telegraph.
-~ @Infinity_BOTs</b>""",
+               text="""<b>helpil onumillla just photo aychale mathi link kittum </b>""",
         reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
                                             "Back", callback_data="start"),
                                         InlineKeyboardButton(
-                                            "About", callback_data="about"),
-                                  ],[
-                                        InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/ImJanindu/JETelegraphBot")
+                                            "About", callback_data="about)
+                            
                                     ]]
                             ),        
             disable_web_page_preview=True,        
