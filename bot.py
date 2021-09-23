@@ -29,8 +29,7 @@ async def start(client, message):
                                       InlineKeyboardButton(
                                             "Source Code", url="https://github.com/ImJanindu/JETelegraphBot")
                                     ]]
-                            ),        
-            disable_web_page_preview=True,        
+                            ),                
             parse_mode="html"
 )
 
