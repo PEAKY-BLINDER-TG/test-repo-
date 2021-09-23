@@ -45,7 +45,7 @@ async def help(client, message):
                                         InlineKeyboardButton(
                                             "Back", callback_data="start"),
                                         InlineKeyboardButton(
-                                            "About", callback_data="about)
+                                            "About", callback_data="about"),
                             
                                     ]]
                             ),        
@@ -58,16 +58,16 @@ async def about(client, message):
         await Peaky.send_message(
                chat_id=message.chat.id,
                text="""<b>About Telegraph Bot!</b>
-<b>♞ Developer:</b> <a href="https://t.me/ImJanindu">Janindu 🇱🇰</a>
-<b>♞ Support:</b> <a href="https://t.me/InfinityBOTs_Support">Infinity BOTs Support</a>
+<b>♞ Developer:</b> <a href="https://t.me/peaky_blinder_tg">peaky</a>
+<b>♞ Support:</b> <a href="https://t.me/cinemazilla">cinemazilla</a>
 <b>♞ Library:</b> <a href="https://github.com/pyrogram/pyrogram">Pyrogram</a>
-<b>~ @Infinity_BOTs</b>""",
+<b>~ @no_ones_like_me</b>""",
      reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
                                             "Back", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "Source Code", url="https://github.com/ImJanindu/JETelegraphBot")
+                                            "group", url="https://t.me/cinemazilla")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -99,7 +99,7 @@ async def telegraphvid(client, message):
     except:
         await msg.edit_text("Video size should be less than 5mb!") 
     else:
-        await msg.edit_text(f'**Uploaded To Telegraph!\n\n👉 https://telegra.ph{response[0]}\n\nJoin @JEBotZ**',
+        await msg.edit_text(f'**Uploaded To Telegraph!\n\n👉 https://telegra.ph{response[0]}\n\nJoin @cinemazilla**',
             disable_web_page_preview=True,
         )
     finally:
