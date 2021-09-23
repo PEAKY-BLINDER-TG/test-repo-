@@ -13,11 +13,14 @@ Bot = Client(
    bot_token=Config.TG_BOT_TOKEN,
 )
 
-@Bot.on_message(filters.command("start"))
+@bot.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
-       await message.reply_photo("https://telegra.ph/file/fe47bf785fc127335ac1f.jpg"),
-               caption="Hey There, I'm test bot of hoooo",   
+       await Jebot.send_message(
+               chat_id=message.chat.id,
+               text="""<b>Hey There, I'm Telegraph Bot
+I can upload photos or videos to telegraph. Made by @ImJanindu 🇱🇰
+Hit help button to find out more about how to use me</b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
@@ -28,9 +31,10 @@ async def start(client, message):
                                       InlineKeyboardButton(
                                             "Source Code", url="https://github.com/ImJanindu/JETelegraphBot")
                                     ]]
-                            ),                
-            parse_mode="html"
-)
+                            ),        
+            disable_web_page_preview=True,        
+            parse_mode="html")
+
 
 @Bot.on_message(filters.command("help"))
 async def help(client, message):
