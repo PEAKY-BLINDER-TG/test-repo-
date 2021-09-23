@@ -31,9 +31,7 @@ async def start(client, message):
                                     ]]
                             ),        
             disable_web_page_preview=True,        
-            parse_mode="html"
-            reply_to_message_id=update.message_id
-)
+            parse_mode="html")
 
 @Client.on_message(filters.command("help"))
 async def help(client, message):
