@@ -5,14 +5,14 @@ from telegraph import upload_file
 from config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
-wasim = Client(
+ Client(
    "Telegraph Uploader",
    api_id=Config.APP_ID,
    api_hash=Config.API_HASH,
    bot_token=Config.TG_BOT_TOKEN,
 )
 
-@wasim.on_message(filters.command("start"))
+@Client.on_message(filters.command("start"))
 async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
