@@ -12,7 +12,7 @@ Peaky = Client(
    bot_token=Config.TG_BOT_TOKEN,
 )
 
-@Peakyt.on_message(filters.command(["help"]) & filters.private, group=1)
+@Peaky.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
         InlineKeyboardButton('Home ⚡', callback_data='start'),
