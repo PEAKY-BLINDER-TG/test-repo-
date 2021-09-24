@@ -42,8 +42,9 @@ async def start(bot, update):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await bot.send_message(
+    await bot.send_photo(
         chat_id=update.chat.id,
+        photo="https://telegra.ph/file/81a2435b00d1d77d511f1.jpg",
         text=START_TEXT,
         reply_markup=reply_markup,
         parse_mode="html",
