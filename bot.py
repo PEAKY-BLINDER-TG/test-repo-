@@ -60,7 +60,7 @@ async def start(bot, update):
 
 #now set call back 
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close|help_text)$"), group=2)
+@Client.on_callback_query(filters.regex(r"^(start|help|about|about_alert|close|)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -72,7 +72,7 @@ async def callback_data(bot, update: CallbackQuery):
         ],[
             InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
         ],[
-            InlineKeyboardButton('Help ⚙', callback_data="help_text")
+            InlineKeyboardButton('Help ⚙', callback_data="about_alert")
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
