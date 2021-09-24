@@ -33,7 +33,6 @@ async def help(bot, update):
 
 @Peaky.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
-
 buttons = [[
         InlineKeyboardButton('Home ⚡', callback_data='start'),
         InlineKeyboardButton('About 🚩', callback_data='about')
