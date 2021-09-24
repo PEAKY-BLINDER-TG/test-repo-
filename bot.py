@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 from telegraph import upload_file
 from config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-
+HELP_TEXT ="""ONUMILLLA PARA"""
 Peaky = Client(
    "Telegraph Uploader",
    api_id=Config.APP_ID,
@@ -25,7 +25,7 @@ async def help(bot, update):
     
     await bot.send_message(
         chat_id=update.chat.id,
-        text=Translation.HELP_TEXT,
+        text=HELP_TEXT,
         reply_markup=reply_markup,
         parse_mode="html",
         reply_to_message_id=update.message_id
