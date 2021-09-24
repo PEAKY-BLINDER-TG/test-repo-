@@ -2,7 +2,7 @@ import os
 import logging
 from pyrogram import Client, filters
 from config import Config
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 HELP_TEXT ="""ONUMILLLA PARA"""
 START_TEXT = """HLO SUGAMNO NDHDHBDBDJDB"""
 ABOUT_TEXT = """onu podey"""
