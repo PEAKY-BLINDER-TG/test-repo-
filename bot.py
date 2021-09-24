@@ -5,7 +5,7 @@ from config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 HELP_TEXT ="""ONUMILLLA PARA"""
 START_TEXT = """HLO SUGAMNO NDHDHBDBDJDB"""
-ABOUT_TEXT = """onu podey""
+ABOUT_TEXT = """onu podey"""
 Peaky = Client(
    "Test bot",
    api_id=Config.APP_ID,
