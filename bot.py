@@ -39,7 +39,7 @@ async def help(bot, update):
 async def start(bot, update):
     await message.reply_photo(
         photo="https://telegra.ph/file/fe47bf785fc127335ac1f.jpg",
-        caption=f"""**Hello {message.from_user.mention}\nഞാൻ Mᴏᴠɪᴇ Gʀᴀᴍ എന്ന ഗ്രൂപ്പിൽ മൂവി ഫിൽറ്റർ ചെയ്യുന്ന ബോട് അണ്
+        caption=f"""**Hello {update.from_user.mention}\nഞാൻ Mᴏᴠɪᴇ Gʀᴀᴍ എന്ന ഗ്രൂപ്പിൽ മൂവി ഫിൽറ്റർ ചെയ്യുന്ന ബോട് അണ്
 നോക്കണ്ടാ എന്നെ മറ്റു ഗ്രൂപ്പിൽ ഒന്നും ഉപയോഗിക്കാൻ കഴിയുകയില്ല!**""",
         reply_markup=InlineKeyboardMarkup(
             [
