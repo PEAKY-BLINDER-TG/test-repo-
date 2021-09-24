@@ -60,25 +60,25 @@ async def start(bot, update):
 
 #now set call back 
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|about_alert|close)$"), group=2)
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close|about_alert)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/AlbertEinstein_TG'),
-            InlineKeyboardButton('Source Code 🧾', url ='https://github.com/CrazyBotsz/Adv-Filter-Bot-V2')
+            InlineKeyboardButton('🕵‍♂ ᴄʀᴇᴀᴛᴏʀ', url='https://t.me/no_ones_like_me'),
+            InlineKeyboardButton('⚠️ ᴊᴏɪɴ', url ='https://t.me/SSM_Chat')
         ],[
-            InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
+            InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/SevenScreenMovie')
         ],[
-            InlineKeyboardButton('Help ⚙', callback_data="about_alert")
+            InlineKeyboardButton('Help ⚙', callback_data="help")
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await update.message.edit_text(
-            START_TEXT.format(update.from_user.mention),
+            Translation.START_TEXT.format(update.from_user.mention),
             reply_markup=reply_markup,
             parse_mode="html",
             disable_web_page_preview=True
@@ -87,16 +87,16 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "help":
         buttons = [[
-            InlineKeyboardButton('Home ⚡', callback_data='start'),
-            InlineKeyboardButton('About 🚩', callback_data='about')
+            InlineKeyboardButton('𝗵𝗼𝗺𝗲 ⚡', callback_data='start'),
+            InlineKeyboardButton('𝗮𝗯𝗼𝘂𝘁 🚩', callback_data='about_alert')
         ],[
-            InlineKeyboardButton('Close 🔐', callback_data='close')
+            InlineKeyboardButton('𝗰𝗹𝗼𝘀𝗲 🔐', callback_data='close')
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await update.message.edit_text(
-            HELP_TEXT,
+            Translation.HELP_TEXT,
             reply_markup=reply_markup,
             parse_mode="html",
             disable_web_page_preview=True
@@ -105,14 +105,14 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "about": 
         buttons = [[
-            InlineKeyboardButton('Home ⚡', callback_data='start'),
-            InlineKeyboardButton('Close 🔐', callback_data='close')
+            InlineKeyboardButton('𝗵𝗼𝗺𝗲 ⚡', callback_data='start'),
+            InlineKeyboardButton('𝗰𝗹𝗼𝘀𝗲 🔐', callback_data='close')
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await update.message.edit_text(
-            ABOUT_TEXT,
+            Translation.ABOUT_TEXT,
             reply_markup=reply_markup,
             parse_mode="html"
         )
