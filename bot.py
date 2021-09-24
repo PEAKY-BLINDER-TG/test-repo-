@@ -30,5 +30,11 @@ async def help(bot, update):
         reply_to_message_id=update.message_id
     )
 
+@Client.on_message(filters.command(["start"]) & filters.private, group=1)
+async def start(bot, update):
 
+startbutton = [[
+                 InlineKeyboardButton("wasim", url="https://t.me/wafikh"),
+                 InlineKeyboardButton("wasim", url="https://t.me/wafikh")
+                ]]
 Peaky.run()
