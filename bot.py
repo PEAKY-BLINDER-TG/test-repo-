@@ -52,7 +52,7 @@ async def start(bot, update):
                 ],
                 [
                     InlineKeyboardButton("💡𝙃𝙀𝙇𝙋", callback_data="about_alert"),
-                    InlineKeyboardButton("🔐 𝘾𝙇𝙊𝙎𝙀", callback_data="close"),
+                    InlineKeyboardButton("🔐 𝘾𝙇𝙊𝙎𝙀", callback_data="about_alert"),
                 ]
             ]
         ),
@@ -85,7 +85,7 @@ async def callback_data(bot, update: CallbackQuery):
         )
 
 
-    elif query_data == "help":
+    if query_data == "help":
         buttons = [[
             InlineKeyboardButton('𝗵𝗼𝗺𝗲 ⚡', callback_data='start'),
             InlineKeyboardButton('𝗮𝗯𝗼𝘂𝘁 🚩', callback_data='about_alert')
@@ -103,7 +103,7 @@ async def callback_data(bot, update: CallbackQuery):
         )
 
 
-    elif query_data == "about": 
+    if query_data == "about": 
         buttons = [[
             InlineKeyboardButton('𝗵𝗼𝗺𝗲 ⚡', callback_data='start'),
             InlineKeyboardButton('𝗰𝗹𝗼𝘀𝗲 🔐', callback_data='close')
@@ -118,7 +118,7 @@ async def callback_data(bot, update: CallbackQuery):
         )
 
 
-    elif query_data == "close":
+    if query_data == "close":
         await update.message.delete()
 
     if query_data == "about_alert":
