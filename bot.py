@@ -121,6 +121,6 @@ async def callback_data(bot, update: CallbackQuery):
     elif query_data == "close":
         await update.message.delete()
 
-    elif query_data == "help_text":
-        await update.answer("I like you smartness but Don't be over smart", show_alert=true)
+    if query_data == "help_alert":
+        await update.answer("hi broooo", show_alert=True)
 Peaky.run()
