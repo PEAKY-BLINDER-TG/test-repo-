@@ -35,9 +35,11 @@ async def help(bot, update):
 async def start(bot, update):
 
 buttons = [[
-              InlineKeyboardButton("wasim", url="https://t.me/wafikh"),
-              InlineKeyboardButton("wasim", url="https://t.me/wafikh")
-          ]]
+        InlineKeyboardButton('Home ⚡', callback_data='start'),
+        InlineKeyboardButton('About 🚩', callback_data='about')
+    ],[
+        InlineKeyboardButton('Close 🔐', callback_data='close')
+    ]]
 
                 reply_markup = InlineKeyboardMarkup(buttons)
 
