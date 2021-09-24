@@ -5,6 +5,7 @@ from config import Config
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 HELP_TEXT ="""ONUMILLLA PARA"""
 START_TEXT = """HLO SUGAMNO NDHDHBDBDJDB"""
+ABOUT_TEXT = """onu podey""
 Peaky = Client(
    "Test bot",
    api_id=Config.APP_ID,
@@ -71,7 +72,7 @@ async def callback_data(bot, update: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await update.message.edit_text(
-            Translation.START_TEXT.format(update.from_user.mention),
+            START_TEXT.format(update.from_user.mention),
             reply_markup=reply_markup,
             parse_mode="html",
             disable_web_page_preview=True
@@ -89,7 +90,7 @@ async def callback_data(bot, update: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await update.message.edit_text(
-            Translation.HELP_TEXT,
+            HELP_TEXT,
             reply_markup=reply_markup,
             parse_mode="html",
             disable_web_page_preview=True
@@ -105,7 +106,7 @@ async def callback_data(bot, update: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         
         await update.message.edit_text(
-            Translation.ABOUT_TEXT,
+            ABOUT_TEXT,
             reply_markup=reply_markup,
             parse_mode="html"
         )
