@@ -1,5 +1,9 @@
-telegraph
 Pillow
 Pyrogram
 TgCrypto
 aiohttp
+Dnspython
+Motor
+Pyrogram
+Pymongo
+Requests 
