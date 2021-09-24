@@ -56,7 +56,6 @@ async def start(bot, update):
                 ]
             ]
         ),
-        reply_to_message_id=message.message_id
     )
 
 #now set call back 
