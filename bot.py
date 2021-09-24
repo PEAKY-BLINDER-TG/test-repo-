@@ -51,8 +51,8 @@ async def start(bot, update):
                     InlineKeyboardButton("♻️ 𝙅𝙊𝙄𝙉 𝙊𝙐𝙍 𝘾𝙃𝘼𝙉𝙉𝙀𝙇 ♻️", url="https://t.me/joinchat/WSO_eDhGmFhmMzE1")
                 ],
                 [
-                    InlineKeyboardButton("💡𝙃𝙀𝙇𝙋", callback_data="help_data"),
-                    InlineKeyboardButton("🔐 𝘾𝙇𝙊𝙎𝙀", callback_data="close_data"),
+                    InlineKeyboardButton("💡𝙃𝙀𝙇𝙋", callback_data="help_text"),
+                    InlineKeyboardButton("🔐 𝘾𝙇𝙊𝙎𝙀", callback_data="close"),
                 ]
             ]
         ),
@@ -60,7 +60,7 @@ async def start(bot, update):
 
 #now set call back 
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close)$"), group=2)
+@Client.on_callback_query(filters.regex(r"^(start|help|about|close|help_text)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
@@ -72,7 +72,7 @@ async def callback_data(bot, update: CallbackQuery):
         ],[
             InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
         ],[
-            InlineKeyboardButton('Help ⚙', callback_data="help")
+            InlineKeyboardButton('Help ⚙', callback_data="help_text")
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -120,4 +120,7 @@ async def callback_data(bot, update: CallbackQuery):
 
     elif query_data == "close":
         await update.message.delete()
+
+    elif query_data == "help_text":
+        await update.answer("I like you smartness but Don't be over smart", show_alert=true))
 Peaky.run()
