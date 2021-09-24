@@ -35,10 +35,11 @@ async def help(bot, update):
 @Peaky.on_message(filters.command(["start"]) & filters.private, group=1)
 async def start(bot, update):
     buttons = [[
-        InlineKeyboardButton('Home ⚡', callback_data='start'),
-        InlineKeyboardButton('About 🚩', callback_data='about')
+        InlineKeyboardButton('🔰 𝙹𝙾𝙸𝙽', url="https://t.me/cinemazilla"),
+        InlineKeyboardButton('👨‍💻 𝙲𝚁𝙴𝙰𝚃𝙾𝚁', url="https://t.me/peaky_blinder_tg")
     ],[
-        InlineKeyboardButton('Close 🔐', callback_data='close')
+        InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴', callback_data='close')
+        InlineKeyboardButton('🎧 𝙷𝙴𝙻𝙿', callback_data='help')
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
