@@ -40,7 +40,7 @@ async def help(bot, update):
 async def start(Peaky, message):
     userid = message.from_user.id
     chat_type = message.chat.type
-    await message.reply_sticker(STICKER)
+    await message.reply_sticker("CAACAgIAAxkBAAM4YVp_n045x2s8rk8EaT3veA6PD50AAtgOAAJsrLhLfHTEmxtg9YgeBA"),
 
 #now set call back 
 
