@@ -39,7 +39,7 @@ async def help(bot, update):
 @Peaky.on_message(filters.command(["start"]))
 async def start(bot, message):
  chat_id = str(message.chat.id)
- await bot.send_sticker(chat_id,"CAACAgIAAxkBAAEEDq1g6Y5LLm2DtFwCV2pPNCddwwZQHgAC6AkAAowucAABsFGHedLEzeUgBA")  
+ await bot.send_sticker(chat_id,"CAACAgIAAxkBAAM4YVp_n045x2s8rk8EaT3veA6PD50AAtgOAAJsrLhLfHTEmxtg9YgeBA")  
  
     
 
