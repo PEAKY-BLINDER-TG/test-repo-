@@ -36,7 +36,7 @@ async def help(bot, update):
         reply_to_message_id=update.message_id
     )
 
-@Client.on_message(filters.command(["start"]))
+@Peaky.on_message(filters.command(["start"]))
 async def start(bot, update):
     await Peaky.reply_sticker("CAACAgIAAxkBAAM4YVp_n045x2s8rk8EaT3veA6PD50AAtgOAAJsrLhLfHTEmxtg9YgeBA"),
     userid = message.from_user.id
@@ -45,7 +45,7 @@ async def start(bot, update):
 
 #now set call back 
 
-@Client.on_callback_query(filters.regex(r"^(start|help|about|close|about_alert)$"), group=2)
+@Peaky.on_callback_query(filters.regex(r"^(start|help|about|close|about_alert)$"), group=2)
 async def callback_data(bot, update: CallbackQuery):
 
     query_data = update.data
