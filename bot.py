@@ -37,7 +37,7 @@ async def help(bot, update):
     )
 
 @Client.on_message(filters.command(["start"]))
-async def delallconfirm(client, message):
+async def startclient, message):
     userid = message.from_user.id
     chat_type = message.chat.type
     await message.reply_sticker(STICKER)
