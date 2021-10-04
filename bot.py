@@ -38,9 +38,10 @@ async def help(bot, update):
 
 @Client.on_message(filters.command(["start"]))
 async def start(Peaky, message):
+    await message.reply_sticker("CAACAgIAAxkBAAM4YVp_n045x2s8rk8EaT3veA6PD50AAtgOAAJsrLhLfHTEmxtg9YgeBA"),
     userid = message.from_user.id
     chat_type = message.chat.type
-    await message.reply_sticker("CAACAgIAAxkBAAM4YVp_n045x2s8rk8EaT3veA6PD50AAtgOAAJsrLhLfHTEmxtg9YgeBA"),
+    
 
 #now set call back 
 
