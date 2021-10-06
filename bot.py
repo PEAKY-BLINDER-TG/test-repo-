@@ -47,7 +47,7 @@ async def start(bot, message):
             InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/SevenScreenMovie')
         ],[
             InlineKeyboardButton('Help ⚙', callback_data="help")
-        ]]))
+        ]])
  
     
 
