@@ -40,7 +40,14 @@ async def help(bot, update):
 async def start(bot, message):
  chat_id = str(message.chat.id)
  await bot.send_sticker(chat_id,"CAACAgIAAxkBAAM4YVp_n045x2s8rk8EaT3veA6PD50AAtgOAAJsrLhLfHTEmxtg9YgeBA")
- reply_markup=reply_markup,
+ reply_markup = InlineKeyboardMarkup([[
+            InlineKeyboardButton('🕵‍♂ ᴄʀᴇᴀᴛᴏʀ', url='https://t.me/no_ones_like_me'),
+            InlineKeyboardButton('⚠️ ᴊᴏɪɴ', url ='https://t.me/SSM_Chat')
+        ],[
+            InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/SevenScreenMovie')
+        ],[
+            InlineKeyboardButton('Help ⚙', callback_data="help")
+        ]]))
  
     
 
