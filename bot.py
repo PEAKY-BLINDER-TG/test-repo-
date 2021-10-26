@@ -39,7 +39,7 @@ async def help(bot, update):
 @Peaky.on_message(filters.command(["start"]))
 async def start(bot, message):
  chat_id = str(message.chat.id)
- await bot.send_sticker(chat_id,"CAACAgIAAxkBAAM4YVp_n045x2s8rk8EaT3veA6PD50AAtgOAAJsrLhLfHTEmxtg9YgeBA")
+ await bot.send_sticker(chat_id,"CAACAgIAAxkBAAIpI2F3krsxKAngOW664GuE00UwYGSRAAJ6DQAC0YlwSCgyxmI0r89BHgQ")
  reply_markup = InlineKeyboardMarkup([[
             InlineKeyboardButton('🕵‍♂ ᴄʀᴇᴀᴛᴏʀ', url='https://t.me/no_ones_like_me'),
             InlineKeyboardButton('⚠️ ᴊᴏɪɴ', url ='https://t.me/SSM_Chat')
