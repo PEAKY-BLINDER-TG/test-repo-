@@ -39,15 +39,6 @@ START_TEXT = "HEY BRUHH HOW ARE YOUUU"
 
 @Peaky.on_message(filters.text(["start"]))
 async def start(bot, message):
- buttons = [[
-        InlineKeyboardButton('Home ⚡', callback_data='start'),
-        InlineKeyboardButton('About 🚩', callback_data='about')
-    ],[
-        InlineKeyboardButton('Close 🔐', callback_data='close')
-    ]]
-    
-    reply_markup = InlineKeyboardMarkup(buttons)
-    
     await bot.send_message(
         chat_id=update.chat.id,
         text=START_TEXT,
