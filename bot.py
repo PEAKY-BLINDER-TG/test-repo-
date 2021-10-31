@@ -35,18 +35,24 @@ async def help(bot, update):
         parse_mode="html",
         reply_to_message_id=update.message_id
     )
+START_TEXT = "HEY BRUHH HOW ARE YOUUU"
 
-@Peaky.on_message(filters.command(["start"]))
+@Peaky.on_message(filters.text(["start"]))
 async def start(bot, message):
- chat_id = str(message.chat.id)
- await bot.send_sticker(chat_id,"CAACAgIAAxkBAAIpI2F3krsxKAngOW664GuE00UwYGSRAAJ6DQAC0YlwSCgyxmI0r89BHgQ")
- reply_markup = InlineKeyboardMarkup([[
-            InlineKeyboardButton('🕵‍♂ ᴄʀᴇᴀᴛᴏʀ', url='https://t.me/no_ones_like_me'),
-            InlineKeyboardButton('⚠️ ᴊᴏɪɴ', url ='https://t.me/SSM_Chat')
-        ],[
-            InlineKeyboardButton('🎬 ᴄʜᴀɴɴᴇʟ', url='https://t.me/SevenScreenMovie')
-        ],[
-            InlineKeyboardButton('Help ⚙', callback_data="help")
-        ]])
-
+ buttons = [[
+        InlineKeyboardButton('Home ⚡', callback_data='start'),
+        InlineKeyboardButton('About 🚩', callback_data='about')
+    ],[
+        InlineKeyboardButton('Close 🔐', callback_data='close')
+    ]]
+    
+    reply_markup = InlineKeyboardMarkup(buttons)
+    
+    await bot.send_message(
+        chat_id=update.chat.id,
+        text=START_TEXT,
+        reply_markup=reply_markup,
+        parse_mode="html",
+        reply_to_message_id=update.message_id
+    )
 Peaky.run()
