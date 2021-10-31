@@ -37,8 +37,10 @@ async def help(bot, update):
     )
 START_TEXT = "HEY BRUHH HOW ARE YOUUU"
 
-@Peaky.on_message(filters.text("wasim"))
+@Peaky.on_message(filters.text)
 async def wasim(bot, message):
+    if not message.text.startswith("wasim"):
+        return
     await bot.send_message(
         chat_id=update.chat.id,
         text=START_TEXT,
