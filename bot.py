@@ -117,34 +117,4 @@ async def callback_data(bot, update: CallbackQuery):
     if query_data == "about_alert":
         await update.answer("hi broooo", show_alert=True)
 
-@Peaky.on_message(filters.private & filters.command("dark"))
-async def sts(c, m):
-    if m.from_user.id not in ADMIN_ID:
-        await m.reply_text(
-            text=f"`your not dark fu**k`",
-            parse_mode="Markdown",
-            quote=True
-          )
-        return
-    await m.reply_text(
-        text=f"`😍 hey  dark how are you are fyn click /fyn if you fine 😍`",
-        parse_mode="Markdown",
-        quote=True
-    )
-              
-@Peaky.on_message(filters.private & filters.command("fyn"))
-async def sts(c, m):   
-    if m.from_user.id not in ADMIN_ID: 
-        await bot.send_message(
-            text=f"`nee dark Angel allalo` 🤬🤬🤬🤬😤",
-            parse_mode="html",
-            reply_to_message_id=update.message_id
-         )
-        return
-    await bot.send_message(
-        text=f"😍okey iam also fyn😍`\`nclick cancel button to cancel this 😄😄`",
-        parse_mode="html",
-        reply_to_message_id=update.message_id
-    )
-
 Peaky.run()
