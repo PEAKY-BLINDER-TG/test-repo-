@@ -135,13 +135,13 @@ async def sts(c, m):
 @Peaky.on_message(filters.private & filters.command("fyn"))
 async def sts(c, m):   
     if m.from_user.id not in ADMIN_ID: 
-        await m.reply_text(
+        await bot.send_message((
             text=f"`nee dark Angel allalo` 🤬🤬🤬🤬😤",
             parse_mode="Markdown",
             quote=true
           )
         return
-    await m.reply_text(
+    await bot.send_message((
         text=f"😍okey iam also fyn😍`\`nclick cancel button to cancel this 😄😄`",
         parse_mode="Markdown",
         quote=true
