@@ -37,7 +37,7 @@ async def help(bot, update):
     )
 START_TEXT = "HEY BRUHH HOW ARE YOUUU"
 
-@Peaky.on_message(filters.text("wasim")
+@Peaky.on_message(filters.text("wasim"))
 async def start(bot, message):
     await bot.send_message(
         chat_id=update.chat.id,
