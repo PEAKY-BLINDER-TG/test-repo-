@@ -116,5 +116,4 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "about_alert":
         await update.answer("hi broooo", show_alert=True)
-
 Peaky.run()
