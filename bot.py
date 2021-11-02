@@ -20,7 +20,7 @@ Bot = Client(
 @Bot.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
     text = START_TEXT.format(update.from_user.mention)
-    await bot.send_message(
+    await Bot.send_message(
         text=text,
         disable_web_page_preview=True,
         quote=True,
