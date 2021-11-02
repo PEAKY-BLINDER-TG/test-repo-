@@ -25,7 +25,6 @@ async def start(bot, update):
         disable_web_page_preview=True,
         quote=True,
         prase_mode = "Markdown",
-        reply_markup=reply_markup
     )
 
 Bot.run()
