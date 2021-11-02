@@ -19,12 +19,24 @@ Bot = Client(
 
 @Bot.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
-    text = START_TEXT.format(update.from_user.mention)
-    await Bot.send_message(
-        text=text,
-        disable_web_page_preview=True,
-        quote=True,
-        prase_mode = "Markdown",
+    await update.reply_photo(
+        photo=random.choice(PHOTOS),
+        caption=f"""<b>Hᴇʏ {update.from_user.mention},
+എന്നെ <a href="tg://settings">നിന്റെ</a> ഗ്രൂപ്പിൽ വേണമെങ്കിൽ ആഡ് ചെയാം ¡
+𝙼𝙰𝙸𝙽𝚃𝙰𝙸𝙽𝙴𝙳 𝙱𝚈 <a href="https://t.me/Joel_tg">𝚃𝙷𝙸𝚂 𝙱𝙾𝚈</a></b>""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("➕ Add Me To Your Group ➕", url="t.me/sakura_x_bot?startgroup=true"),
+                ],[
+                    InlineKeyboardButton("🕵‍♂ Creator", callback_data="devs"),
+                    InlineKeyboardButton("⚠️ Group", url="https://t.me/cv_group1"),
+                ],[
+                    InlineKeyboardButton("💡 Help", callback_data="home"),
+                    InlineKeyboardButton("😃 About", callback_data="about"),
+                ]
+            ]
+        ),
     )
 
 Bot.run()
