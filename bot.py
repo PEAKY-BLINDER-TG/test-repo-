@@ -10,6 +10,7 @@ TG_BOT_TOKEN = "2019246874:AAEJe65zFbHqO46lsrHhb_JgskbkUK3-BzQ"
 
 START_TEXT = "hey bruhh"
 
+
 Bot = Client(
    "Test bot",
    api_id=APP_ID,
@@ -20,7 +21,7 @@ Bot = Client(
 @Bot.on_message(filters.private & filters.command(["start"]))
 async def start(bot, update):
     await update.reply_photo(
-        photo=random.choice(PHOTOS),
+        photo="https://telegra.ph/file/5865e51742e0f813805a8.jpg",
         caption=f"""<b>Hᴇʏ {update.from_user.mention},
 എന്നെ <a href="tg://settings">നിന്റെ</a> ഗ്രൂപ്പിൽ വേണമെങ്കിൽ ആഡ് ചെയാം ¡
 𝙼𝙰𝙸𝙽𝚃𝙰𝙸𝙽𝙴𝙳 𝙱𝚈 <a href="https://t.me/Joel_tg">𝚃𝙷𝙸𝚂 𝙱𝙾𝚈</a></b>""",
