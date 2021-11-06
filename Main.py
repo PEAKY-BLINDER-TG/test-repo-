@@ -8,7 +8,7 @@ APP_ID = "3637235"
 API_HASH = "028885dcbc64a4b56c47bdad0367523b"
 TG_BOT_TOKEN = "2019246874:AAEJe65zFbHqO46lsrHhb_JgskbkUK3-BzQ"
 
-START_TEXT = "hey bruhh"
+plugins = dict(root="plugins")
 
 print("wait")
 
@@ -17,6 +17,7 @@ wasim = Client(
    api_id=APP_ID,
    api_hash=API_HASH,
    bot_token=TG_BOT_TOKEN,
+   plugins=plugins
 )
 print("bot started")
 wasim.run()
