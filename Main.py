@@ -1,3 +1,5 @@
+#made by wasim Faris 
+#(Date 2021 sat, Nov 6)
 import os
 import logging
 from pyrogram import Client, filters
@@ -6,12 +8,13 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 
 APP_ID = "3637235"
 API_HASH = "028885dcbc64a4b56c47bdad0367523b"
-TG_BOT_TOKEN = "2019246874:AAEJe65zFbHqO46lsrHhb_JgskbkUK3-BzQ"
+TG_BOT_TOKEN = "2110416751:AAF20hCuQlVsIIGEmJCSd03Z8H4rFbrm_6g"
 
 plugins = dict(root="plugins")
 
-print("wait")
+print("wait iam deploy ing.....")
 
+# client 
 wasim = Client(
    "Test bot",
    api_id=APP_ID,
