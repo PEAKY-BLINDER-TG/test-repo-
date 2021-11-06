@@ -10,6 +10,7 @@ TG_BOT_TOKEN = "2019246874:AAEJe65zFbHqO46lsrHhb_JgskbkUK3-BzQ"
 
 START_TEXT = "hey bruhh"
 
+print("wait")
 
 wasim = Client(
    "Test bot",
@@ -17,5 +18,5 @@ wasim = Client(
    api_hash=API_HASH,
    bot_token=TG_BOT_TOKEN,
 )
-
+print("bot started")
 wasim.run()
